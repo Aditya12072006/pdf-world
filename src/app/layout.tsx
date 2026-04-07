@@ -98,6 +98,9 @@ export default function RootLayout({
               {new Date().getFullYear()} PDF World. Free online PDF tools built for speed.
             </p>
             <div className="mt-3 flex flex-wrap gap-4 text-sm">
+              <Link href="/contact" className="text-brand-700 hover:text-brand-900">
+                Contact Us
+              </Link>
               <Link href="/privacy-policy" className="text-brand-700 hover:text-brand-900">
                 Privacy Policy
               </Link>

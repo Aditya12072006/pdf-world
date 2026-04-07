@@ -107,6 +107,21 @@ export default function PrivacyPolicyPage() {
               updated policy.
             </p>
           </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-brand-900">10. Contact</h2>
+            <p className="mt-2">
+              For privacy-related questions, email us at
+              {" "}
+              <a
+                className="text-brand-700 hover:text-brand-900"
+                href={`mailto:${siteConfig.contactEmail}`}
+              >
+                {siteConfig.contactEmail}
+              </a>
+              .
+            </p>
+          </section>
         </div>
       </article>
     </main>

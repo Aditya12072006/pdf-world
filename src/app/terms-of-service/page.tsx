@@ -100,10 +100,13 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-xl font-semibold text-brand-900">11. Contact</h2>
             <p className="mt-2">
-              For legal questions related to these terms, refer to the official site:
+              For legal questions related to these terms, email us at
               {" "}
-              <a className="text-brand-700 hover:text-brand-900" href={siteConfig.url}>
-                {siteConfig.url}
+              <a
+                className="text-brand-700 hover:text-brand-900"
+                href={`mailto:${siteConfig.contactEmail}`}
+              >
+                {siteConfig.contactEmail}
               </a>
               .
             </p>
