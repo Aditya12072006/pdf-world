@@ -69,21 +69,33 @@ export default function RootLayout({
       >
         <header className="border-b border-brand-100/70 bg-white/80 backdrop-blur">
           <div className="container-page flex items-center justify-between py-4">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/pdfworld-logo.png"
-                width={42}
-                height={42}
-                alt="PDF World logo"
-                className="rounded-lg"
-              />
-              <div>
-                <p className="text-xl font-bold text-brand-900" style={{ fontFamily: "var(--font-sora)" }}>
-                  PDF World
-                </p>
-                <p className="text-xs text-slate-500">Free Online PDF Tools</p>
-              </div>
-            </Link>
+            <div className="flex items-center gap-6">
+              <Link href="/" className="flex items-center gap-3">
+                <Image
+                  src="/pdfworld-logo.png"
+                  width={42}
+                  height={42}
+                  alt="PDF World logo"
+                  className="rounded-lg"
+                />
+                <div>
+                  <p className="text-xl font-bold text-brand-900" style={{ fontFamily: "var(--font-sora)" }}>
+                    PDF World
+                  </p>
+                  <p className="text-xs text-slate-500">Free Online PDF Tools</p>
+                </div>
+              </Link>
+
+              <nav className="flex items-center gap-3 text-sm font-semibold text-brand-800 sm:gap-4">
+                <Link href="/" className="hover:text-brand-600">
+                  Tools
+                </Link>
+                <Link href="/blog" className="hover:text-brand-600">
+                  Blog
+                </Link>
+              </nav>
+            </div>
+
             <p className="hidden rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 sm:block">
               Fast • No Signup
             </p>
@@ -98,6 +110,9 @@ export default function RootLayout({
               {new Date().getFullYear()} PDF World. Free online PDF tools built for speed.
             </p>
             <div className="mt-3 flex flex-wrap gap-4 text-sm">
+              <Link href="/blog" className="text-brand-700 hover:text-brand-900">
+                Blog
+              </Link>
               <Link href="/contact" className="text-brand-700 hover:text-brand-900">
                 Contact Us
               </Link>
