@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Manrope, Sora } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
@@ -55,12 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1535449916682839"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1535449916682839" crossOrigin="anonymous"></script>
       </head>
       <body
         className={`${manrope.variable} ${sora.variable} min-h-screen antialiased`}
