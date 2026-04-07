@@ -54,18 +54,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="adsense-loader"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1535449916682839"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className={`${manrope.variable} ${sora.variable} min-h-screen antialiased`}
         style={{ fontFamily: "var(--font-manrope)" }}
       >
-        <Script
-          id="adsense-loader"
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsenseClient}`}
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
-
         <header className="border-b border-brand-100/70 bg-white/80 backdrop-blur">
           <div className="container-page flex items-center justify-between py-4">
             <Link href="/" className="flex items-center gap-3">
@@ -96,6 +97,14 @@ export default function RootLayout({
             <p>
               {new Date().getFullYear()} PDF World. Free online PDF tools built for speed.
             </p>
+            <div className="mt-3 flex flex-wrap gap-4 text-sm">
+              <Link href="/privacy-policy" className="text-brand-700 hover:text-brand-900">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" className="text-brand-700 hover:text-brand-900">
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </footer>
       </body>
